@@ -1,5 +1,8 @@
+require('dotenv').config({ path: '../.env' });
+const connectDB = require('./config/db.js');
 const express = require('express');
 const app = express();
+connectDB(); // Connect to MongoDB
 const usersRouter = require('./routes/users');
 
 // middleware
@@ -20,7 +23,7 @@ app.use((req, res, next) => {
 // mount users router under /api/users
 app.use('/api/users', usersRouter);
 
-const port = 3001;
+const port = process.env.PORT || 3001;
 const host = 'localhost';
 app.listen(port, host, () => {
   console.log(`Server is running at http://${host}:${port}`);

@@ -1,0 +1,76 @@
+.user-card {
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+  width: 100%;
+  max-width: 340px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.user-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.user-card h3 {
+  margin: 0 0 1rem 0;
+  color: #495057;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.user-card p {
+  margin: 0.5rem 0;
+  color: #6c757d;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.role {
+  font-weight: bold;
+  padding: 0.25rem 0.5rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.role.admin {
+  color: #dc3545;
+  background-color: #f8d7da;
+}
+
+.role.user {
+  color: #28a745;
+  background-color: #d4edda;
+}
+
+.delete-btn {
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  margin-top: 1rem;
+  align-self: center;
+  width: auto;
+  min-width: 120px;
+}
+
+.delete-btn:hover {
+  background: linear-gradient(135deg, #c82333 0%, #a02622 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+}
